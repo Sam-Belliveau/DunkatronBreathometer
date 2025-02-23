@@ -128,8 +128,7 @@ void setup()
   // Initialize OLED display.
   oled.begin();
 
-  // Initialize BLE device and create service & characteristic.
-  BLEDevice::init(DEVICE_NAME);
+  // Initialize BLE device and create service & characteristic.x
   pServer = new PersistentBLEServer(DEVICE_NAME, SERVICE_UUID, CHARACTERISTIC_UUID);
 
   // Configure ADC settings.

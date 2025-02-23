@@ -242,12 +242,11 @@ class Game:
             
     def map_amplitude(self, raw_amplitude: int) -> float:
         # Clamp raw_amplitude to the expected range.
-        raw_amplitude = max(0, min(raw_amplitude, 6000))
-        return (1 - raw_amplitude / 6000) * (HEIGHT - 100)
+        raw_amplitude = max(0, min(raw_amplitude, 8000))
+        return (1 - raw_amplitude / 8000) * (HEIGHT - 100)
 
     def map_speed(self, raw_amplitude: int) -> float:
-        # ramp amplitude from 0 -> 6000 to 0 -> 4
-        return (2.5 * raw_amplitude / 6000 + 0.5) ** 2
+        return (2 * raw_amplitude / 8000 + 1) ** 2
 
     def update_background(self):
         # Fill sky.
