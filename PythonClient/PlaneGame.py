@@ -292,10 +292,10 @@ class Game:
             connection_status = "Connected" if self.ble_manager.is_connected() else "Disconnected"
             status_surface = self.font.render(f"BLE: {connection_status}", True, (0, 0, 0))
             self.screen.blit(status_surface, (10, 10))
-            amplitude_surface = self.font.render(f"Raw Amp: {raw_amp}", True, (0, 0, 0))
-            self.screen.blit(amplitude_surface, (10, 40))
-            filtered_surface = self.font.render(f"Filtered: {filtered_amp:.2f}", True, (0, 0, 0))
-            self.screen.blit(filtered_surface, (10, 70))
+            # amplitude_surface = self.font.render(f"Raw Amp: {raw_amp}", True, (0, 0, 0))
+            # self.screen.blit(amplitude_surface, (10, 40))
+            # filtered_surface = self.font.render(f"Filtered: {filtered_amp:.2f}", True, (0, 0, 0))
+            # self.screen.blit(filtered_surface, (10, 70))
 
             pygame.display.flip()
             self.clock.tick(self.fps)
